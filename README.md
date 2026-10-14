@@ -4,17 +4,6 @@ Python ve Pygame ile üç modlu labirent oyunu: kullanıcı peyniri bulur, bilgi
 
 ![Bilgisayar modu](docs/images/bilgisayar.png)
 
-## Ders isterleri
-
-| İster | Uygulama |
-|---|---|
-| Bilgisayar peyniri bulsun | DFS keşfi, duvar hafızası ve geri izleme |
-| Kullanıcı peyniri bulsun | WASD / yön tuşları |
-| İki fare ağ üzerinden oynasın | TCP 50505; oda kur / odaya katıl |
-| Her modda hamle tutulsun | Başarılı hücre geçişi = 1 hamle; deneme ve çarpışma ayrı |
-| En az 3 test senaryosu | 3 ana kabul senaryosu + 15 otomatik test |
-| Dokümantasyon hazırlansın | Aşağıdaki Markdown belgeleri ve PDF |
-
 ## Kurulum (Windows PowerShell)
 
 Python 3.10 veya üzeri önerilir. Doğrulama ortamı: Python 3.12.14 ve Pygame 2.6.1.
@@ -110,14 +99,6 @@ Linux/macOS: `.venv/bin/python -m unittest discover -s tests -v`
 
 Testler pencere açmadan SDL dummy sürücüsüyle ve yerel TCP soketleriyle çalışır. Ayrı fiziksel bilgisayarlar arasındaki güvenlik duvarı/Wi-Fi davranışı bu testlerin kapsamında değildir.
 
-## Dokümantasyon
-
-- [Tek PDF: proje, kullanım ve test raporu](docs/Labirent_Dokumantasyon.pdf)
-- [Algoritma ve mimari](docs/algoritma.md)
-- [Kullanım kılavuzu](docs/kullanim_kilavuzu.md)
-- [Test raporu ve üç kabul senaryosu](docs/test_raporu.md)
-
-PDF mail eki olarak hazırdır. Mail gönderimi yapılmamıştır; alıcı adresi ve gönderim talimatı ayrıca gereklidir.
 
 ## Dosyalar
 
