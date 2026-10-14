@@ -45,6 +45,10 @@ class RLAgent:
         """Yalnizca BIR hareket denemesi yapar; haritayi onceden okumaz."""
         if self.finished:
             return
+        if self.position == tuple(goal):
+            self.won = self.finished = True
+            self.status = "Peynir bulundu!"
+            return
         state = self.position
         x, y = state
         available = []

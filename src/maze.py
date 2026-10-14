@@ -4,8 +4,11 @@ ROWS = 15
 COLS = 21
 
 
-def generate_maze(rows=ROWS, cols=COLS):
+def generate_maze(rows=ROWS, cols=COLS, seed=None):
     """Rastgele, tum gecitleri bagli, dongusuz labirent olusturur."""
+    if any(type(n) is not int or n < 3 or n > 51 for n in (rows, cols)):
+        raise ValueError("Boyutlar 3-51 arası tam sayı olmalı.")
+    rng = random.Random(seed)
     rows = rows if rows % 2 else rows + 1
     cols = cols if cols % 2 else cols + 1
     grid = [['#'] * cols for _ in range(rows)]
@@ -21,7 +24,7 @@ def generate_maze(rows=ROWS, cols=COLS):
         if not options:
             stack.pop()
             continue
-        nx, ny, dx, dy = random.choice(options)
+        nx, ny, dx, dy = rng.choice(options)
         grid[y + dy // 2][x + dx // 2] = '.'
         grid[ny][nx] = '.'
         stack.append((nx, ny))
